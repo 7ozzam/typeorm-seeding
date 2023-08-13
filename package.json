@@ -1,6 +1,5 @@
 {
   "name": "@7ozzam/typeorm-seeding",
-  "private": true,
   "version": "5.1.3",
   "description": "🌱 A delightful way to seed test data into your database.",
   "license": "MIT",
@@ -15,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/paranode/typeorm-seeding.git"
+    "url": "https://github.com/7ozzam/typeorm-seeding.git"
   },
   "exports": {
     ".": {
@@ -33,7 +32,7 @@
     }
   },
   "scripts": {
-    "build": "rm -rf build && tsc --project ./tsconfig.build.json",
+    "build": "tsc --project ./tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:ci": "prettier --check \"src/**/*.ts\" \"sample/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" \"sample/**/*.ts\" --fix",

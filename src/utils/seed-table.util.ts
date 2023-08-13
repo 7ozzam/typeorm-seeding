@@ -30,5 +30,5 @@ export const createSeedTable = async (options: ConnectionOptions) => {
 
 export const getExecutedSeeds = async (options: ConnectionOptions) => {
   const connection = await createConnection(options)
-  return await connection.query(`select * from "${options.seedsTableName || 'typeorm_seeds'}"`)
+  return await connection.query(`select * from ${options.seedsTableName || 'typeorm_seeds'}`)
 }
