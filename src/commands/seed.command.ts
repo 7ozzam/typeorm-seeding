@@ -41,7 +41,7 @@ export class SeedCommand implements yargs.CommandModule {
 
   async handler(args: yargs.Arguments<IArgs>) {
     const log = console.log
-    const pkg = await readPackage({ cwd: path.join(process.cwd(), 'node_modules/@paranode/typeorm-seeding') })
+    const pkg = await readPackage({ cwd: path.join(process.cwd(), 'node_modules/@7ozzam/typeorm-seeding') })
     log('🌱  ' + chalk.bold(`TypeORM Seeding v${(pkg as any).version}`))
     const spinner = ora('Loading ormconfig').start()
     const configureOption = {

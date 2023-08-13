@@ -1,5 +1,5 @@
 {
-  "name": "@paranode/typeorm-seeding",
+  "name": "@7ozzam/typeorm-seeding",
   "private": true,
   "version": "3.1.1",
   "description": "🌱 A delightful way to seed test data into your database.",

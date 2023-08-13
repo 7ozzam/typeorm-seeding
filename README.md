@@ -5,8 +5,8 @@
 <h1 align="center" style="text-align: center;">TypeORM Seeding</h1>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@paranode/typeorm-seeding">
-    <img src="https://img.shields.io/npm/v/@paranode/typeorm-seeding" alt="NPM package" />
+  <a href="https://www.npmjs.com/package/@7ozzam/typeorm-seeding">
+    <img src="https://img.shields.io/npm/v/@7ozzam/typeorm-seeding" alt="NPM package" />
   </a>
   <a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="Sematic-Release" /></a>
 </p>
@@ -14,7 +14,7 @@
 <p align="center">
   <b>A delightful way to seed test data into your database.<b></br>
   <span>Inspired by the awesome framework <a href="https://laravel.com/">laravel</a> in PHP and of the repositories from <a href="https://github.com/pleerock">pleerock</a></span></br>
-  <sub>Made with ❤️ by <a href="https://github.com/sayedmahmoud266">Sayed Mahmoud</a>, <a href="https://github.com/hirsch88">Gery Hirschfeld</a> and <a href="https://github.com/@paranode/typeorm-seeding/graphs/contributors">contributors</a></sub>
+  <sub>Made with ❤️ by <a href="https://github.com/sayedmahmoud266">Sayed Mahmoud</a>, <a href="https://github.com/hirsch88">Gery Hirschfeld</a> and <a href="https://github.com/@7ozzam/typeorm-seeding/graphs/contributors">contributors</a></sub>
 </p>
 
 <br />
@@ -42,7 +42,7 @@ This package is a fork of [typeorm-seeding](https://npmjs.com/package/typeorm-se
 
 make sure you install the correct version for your corresponding typeorm version
 
-| @paranode/typeorm-seeding | typeorm |
+| @7ozzam/typeorm-seeding | typeorm |
 | ------------------------- | ------- |
 | version: 2.*              | 0.2.*   |
 | version: 3.*              | 0.3.*   |
@@ -141,9 +141,9 @@ Before using this TypeORM extension please read the [TypeORM Getting Started](ht
 After that install the extension with `npm` or `yarn`.
 
 ```bash
-npm i @paranode/typeorm-seeding
+npm i @7ozzam/typeorm-seeding
 # or
-yarn add @paranode/typeorm-seeding
+yarn add @7ozzam/typeorm-seeding
 ```
 
 ### Configuration
@@ -156,7 +156,7 @@ To configure the path to your seeds and factories change the TypeORM config file
 
 ```typescript
 ...
-import type { ConnectionOptions } from '@paranode/typeorm-seeding';
+import type { ConnectionOptions } from '@7ozzam/typeorm-seeding';
 ...
 
 export const dataSource = new DataSource({
@@ -230,7 +230,7 @@ A seeder class only contains one method by default `run`. Within this method, yo
 > Note. The seeder files will be executed alphabetically.
 
 ```typescript
-import { Factory, Seeder } from '@paranode/typeorm-seeding'
+import { Factory, Seeder } from '@7ozzam/typeorm-seeding'
 import { DataSource } from 'typeorm'
 import { User } from '../entities'
 
