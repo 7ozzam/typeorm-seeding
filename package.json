@@ -1,15 +1,12 @@
 {
   "name": "@7ozzam/typeorm-seeding",
-  "version": "5.1.12",
+  "version": "5.1.15",
   "description": "🌱 A delightful way to seed test data into your database.",
   "license": "MIT",
   "author": "Sayed Mahmoud <sayed@paranode.dev> (https://github.com/sayedmahmoud266) ,Gery Hirschfeld <gery.hirschfeld@w3tec.ch> (https://github.com/hirsch88)",
   "main": "./index.js",
   "module": "./index.mjs",
   "types": "./index.d.ts",
-  "files": [
-    "build/**/*"
-  ],
   "bin": {
     "typeorm-seeding": "./cli.js",
     "typeorm-seeding-ts-node-commonjs": "./cli-ts-node-commonjs.js",
