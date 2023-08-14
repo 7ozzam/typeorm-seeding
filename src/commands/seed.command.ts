@@ -66,7 +66,7 @@ export class SeedCommand implements yargs.CommandModule {
     const factoryFiles = loadFiles(option.factories)
     try {
       await importFiles(factoryFiles)
-      spinner.succeed('Factories are imported')
+      spinner.succeed(`${factoryFiles?.length} Factories are imported`)
     } catch (error) {
       panic(spinner, error, 'Could not import factories!')
     }
@@ -77,7 +77,7 @@ export class SeedCommand implements yargs.CommandModule {
     let seedFileObjects: any[] = []
     try {
       seedFileObjects = await Promise.all(seedFiles.map((seedFile) => importSeed(seedFile)))
-      spinner.succeed('Seeders are imported')
+      spinner.succeed(`${seedFileObjects?.length} Seeders are imported`)
     } catch (error) {
       panic(spinner, error, 'Could not import seeders!')
     }

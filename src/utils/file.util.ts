@@ -1,12 +1,20 @@
-import glob from 'glob'
-import * as path from 'path'
+import glob from 'glob';
+import * as path from 'path';
 
 export const importFiles = async (filePaths: string[]) => {
-  await Promise.all(filePaths.map((filePath) => import(filePath)))
+  await Promise.all(filePaths.map((filePath) => import(filePath)));
 }
 
-export const loadFiles = (filePattern: string[]): string[] => {
-  return filePattern
-    .map((pattern) => glob.sync(path.resolve(process.cwd(), pattern)))
-    .reduce((acc, filePath) => acc.concat(filePath), [])
+export const loadFiles = (filePatternsAndPaths: string[]): string[] => {
+  return filePatternsAndPaths
+    .map((patternOrPath) => {
+      if (patternOrPath.includes('*') || patternOrPath.includes('?')) {
+        // If the entry contains '*' or '?' characters, it's a pattern
+        return glob.sync(path.resolve(process.cwd(), patternOrPath));
+      } else {
+        // Otherwise, treat it as a specific file path
+        return [path.resolve(process.cwd(), patternOrPath)];
+      }
+    })
+    .reduce((acc, filePaths) => acc.concat(filePaths), []);
 }
